@@ -63,7 +63,7 @@ def main():
         booking_details.append(response)
         logging.info(f"Created Booking: {json.dumps(response)}")
 
-    # Log all booking IDs
+    # Log all booking IDs here in the below
     all_ids = get_all_booking_ids()
     logging.info(f"All Booking IDs: {all_ids}")
 
@@ -77,13 +77,13 @@ def main():
     test1['totalprice'] = 1000
     test2['totalprice'] = 1500
 
-    updated1 = update_booking(test1_id, test1, token)
-    updated2 = update_booking(test2_id, test2, token)
+    update_booking1 = update_booking(test1_id, test1, token)
+    update_booking2 = update_booking(test2_id, test2, token)
 
-    logging.info(f"Updated Booking Test1: {json.dumps(updated1)}")
-    logging.info(f"Updated Booking Test2: {json.dumps(updated2)}")
+    logging.info(f"Updated Booking Test1: {json.dumps(update_booking1)}")
+    logging.info(f"Updated Booking Test2: {json.dumps(update_booking2)}")
 
-    # Delete 3rd booking
+    # Delete 3rd booking in the below code
     delete_id = booking_ids[2]
     delete_status = delete_booking(delete_id, token)
     logging.info(f"Deleted Booking ID {delete_id}: Status Code {delete_status}")
